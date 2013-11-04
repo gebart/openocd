@@ -337,8 +337,11 @@ error:
 
 void mpsse_close(struct mpsse_ctx *ctx)
 {
-	if (ctx->usb_dev)
+	if (ctx->usb_dev) {
+		if (ctx->interface)
+			libusb_attach_kernel_driver(ctx->usb_dev, ctx->interface);
 		libusb_close(ctx->usb_dev);
+	}
 	if (ctx->usb_ctx)
 		libusb_exit(ctx->usb_ctx);
 	bit_copy_discard(&ctx->read_queue);
