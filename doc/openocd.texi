@@ -4514,7 +4514,8 @@ The value should normally correspond to a static mapping for the
 @item @code{-rtos} @var{rtos_type} -- enable rtos support for target,
 @var{rtos_type} can be one of @option{auto}, @option{eCos},
 @option{ThreadX}, @option{FreeRTOS}, @option{linux}, @option{ChibiOS},
-@option{embKernel}, @option{mqx}, @option{uCOS-III}, @option{nuttx}
+@option{embKernel}, @option{mqx}, @option{uCOS-III}, @option{nuttx},
+@option{RIOT}
 @xref{gdbrtossupport,,RTOS Support}.
 
 @item @code{-defer-examine} -- skip target examination at initial JTAG chain
@@ -10139,6 +10140,7 @@ Currently supported rtos's include:
 @item @option{mqx}
 @item @option{uCOS-III}
 @item @option{nuttx}
+@item @option{RIOT}
 @end itemize
 
 @quotation Note
@@ -10176,6 +10178,8 @@ _mqx_kernel_data, MQX_init_struct.
 OSRunning, OSTCBCurPtr, OSTaskDbgListPtr, OSTaskQty
 @item nuttx symbols
 g_readytorun, g_tasklisttable
+@item RIOT symbols
+sched_threads, sched_num_threads, sched_active_pid, max_threads.
 @end table
 
 For most RTOS supported the above symbols will be exported by default. However for
@@ -10189,6 +10193,14 @@ along with the project:
 contrib/rtos-helpers/FreeRTOS-openocd.c
 @item uC/OS-III
 contrib/rtos-helpers/uCOS-III-openocd.c
+@end table
+
+For RIOT thread names are only available if it was compiled with DEVELHELP, so
+add this line to your @file{Makefile}:
+
+@table @code
+@item RIOT
+DEVELHELP = 1
 @end table
 
 @node Tcl Scripting API
