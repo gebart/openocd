@@ -289,7 +289,7 @@ static int riot_update_threads(struct rtos *rtos)
 		}
 
 		rtos->thread_details[tasks_found].exists = true;
-		rtos->thread_details[tasks_found].display_str = NULL;
+		rtos->thread_details[tasks_found].extra_info_str = NULL;
 
 		tasks_found++;
 	}
