@@ -39,23 +39,23 @@ static int64_t rtos_riot_Cortex_M_stack_align(struct target *target,
 
 /* see thread_arch.c */
 static const struct stack_register_offset rtos_riot_Cortex_M0_stack_offsets[ARMV7M_NUM_CORE_REGS] = {
-	{ 0x24, 32 },		/* r0	*/
-	{ 0x28, 32 },		/* r1	*/
-	{ 0x2c, 32 },		/* r2	*/
-	{ 0x30, 32 },		/* r3	*/
-	{ 0x14, 32 },		/* r4	*/
-	{ 0x18, 32 },		/* r5	*/
-	{ 0x1c, 32 },		/* r6	*/
-	{ 0x20, 32 },		/* r7	*/
-	{ 0x04, 32 },		/* r8	*/
-	{ 0x08, 32 },		/* r9	*/
-	{ 0x0c, 32 },		/* r10	*/
-	{ 0x10, 32 },		/* r11	*/
-	{ 0x34, 32 },		/* r12	*/
-	{ -2,	32 },		/* sp	*/
-	{ 0x38, 32 },		/* lr	*/
-	{ 0x3c, 32 },		/* pc	*/
-	{ 0x40, 32 },		/* xPSR */
+	{  0, 0x24, 32 },		/* r0	*/
+	{  1, 0x28, 32 },		/* r1	*/
+	{  2, 0x2c, 32 },		/* r2	*/
+	{  3, 0x30, 32 },		/* r3	*/
+	{  4, 0x14, 32 },		/* r4	*/
+	{  5, 0x18, 32 },		/* r5	*/
+	{  6, 0x1c, 32 },		/* r6	*/
+	{  7, 0x20, 32 },		/* r7	*/
+	{  8, 0x04, 32 },		/* r8	*/
+	{  9, 0x08, 32 },		/* r9	*/
+	{ 10, 0x0c, 32 },		/* r10	*/
+	{ 11, 0x10, 32 },		/* r11	*/
+	{ 12, 0x34, 32 },		/* r12	*/
+	{ 13, -2,	32 },		/* sp	*/
+	{ 14, 0x38, 32 },		/* lr	*/
+	{ 15, 0x3c, 32 },		/* pc	*/
+	{ 16, 0x40, 32 },		/* xPSR */
 };
 
 const struct rtos_register_stacking rtos_riot_Cortex_M0_stacking = {
@@ -68,23 +68,23 @@ const struct rtos_register_stacking rtos_riot_Cortex_M0_stacking = {
 
 /* see thread_arch.c */
 static const struct stack_register_offset rtos_riot_Cortex_M34_stack_offsets[ARMV7M_NUM_CORE_REGS] = {
-	{ 0x24, 32 },		/* r0	*/
-	{ 0x28, 32 },		/* r1	*/
-	{ 0x2c, 32 },		/* r2	*/
-	{ 0x30, 32 },		/* r3	*/
-	{ 0x04, 32 },		/* r4	*/
-	{ 0x08, 32 },		/* r5	*/
-	{ 0x0c, 32 },		/* r6	*/
-	{ 0x10, 32 },		/* r7	*/
-	{ 0x14, 32 },		/* r8	*/
-	{ 0x18, 32 },		/* r9	*/
-	{ 0x1c, 32 },		/* r10	*/
-	{ 0x20, 32 },		/* r11	*/
-	{ 0x34, 32 },		/* r12	*/
-	{ -2,	32 },		/* sp	*/
-	{ 0x38, 32 },		/* lr	*/
-	{ 0x3c, 32 },		/* pc	*/
-	{ 0x40, 32 },		/* xPSR */
+	{  0, 0x24, 32 },		/* r0	*/
+	{  1, 0x28, 32 },		/* r1	*/
+	{  2, 0x2c, 32 },		/* r2	*/
+	{  3, 0x30, 32 },		/* r3	*/
+	{  4, 0x04, 32 },		/* r4	*/
+	{  5, 0x08, 32 },		/* r5	*/
+	{  6, 0x0c, 32 },		/* r6	*/
+	{  7, 0x10, 32 },		/* r7	*/
+	{  8, 0x14, 32 },		/* r8	*/
+	{  9, 0x18, 32 },		/* r9	*/
+	{ 10, 0x1c, 32 },		/* r10	*/
+	{ 11, 0x20, 32 },		/* r11	*/
+	{ 12, 0x34, 32 },		/* r12	*/
+	{ 13, -2,	32 },		/* sp	*/
+	{ 14, 0x38, 32 },		/* lr	*/
+	{ 15, 0x3c, 32 },		/* pc	*/
+	{ 16, 0x40, 32 },		/* xPSR */
 };
 
 const struct rtos_register_stacking rtos_riot_Cortex_M34_stacking = {
